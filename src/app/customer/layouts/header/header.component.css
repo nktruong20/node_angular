@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header .title ul li a{
+    text-decoration: none;
+    color: black;
+}
+.navbar li a{
+    font-weight: bolder;
+    margin-right: 10px;
+    margin-left: 40px;
+}
+.right{
+    padding-top: 20px;
+    padding-left: 100px;
+}
+.right a i{
+    color: black;
+    padding: 0px 20px;
+    cursor: pointer;
+}

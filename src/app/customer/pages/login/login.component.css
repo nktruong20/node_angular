@@ -1,0 +1,47 @@
+.bgLogin {
+    background-image: url('http://localhost:3000/images/bgLogin.jpeg');
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.slogan {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.504);
+    padding: 60px 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    font-family: 'Pacifico', cursive;
+    border-radius: 40px;
+}
+
+.input {
+    border-color: green !important;
+    border-radius: 10px;
+}
+
+.forget {
+    cursor: pointer;
+    color: white;
+}
+
+.submit {
+    margin-top: 20px;
+    background: green;
+    color: #fff;
+}
+.bg{
+
+    background-image: url('https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    height: 700px;
+    background-repeat: round;
+    width: 100%;
+    padding-top: 60px;
+    background-size: cover;
+}
+
+.bg .col-md-7{
+    margin: 0 auto;background-color: rgba(0, 0, 0, 0.31);opacity: 1;
+}

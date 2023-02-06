@@ -1,0 +1,13 @@
+.end{
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-fresh-meat-gourmet-banner-background-image_192492.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+}
+
+.end h2,.end h4{
+    color: white;
+}
+.end h6{
+    color: gray;
+}

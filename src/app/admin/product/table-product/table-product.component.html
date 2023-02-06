@@ -1,0 +1,38 @@
+<button class="btn btn-success" routerLink="/admin/create-product"> + Add Product  </button>
+<table class="table" style="background-color: white;">
+    <thead>
+        <tr style="background-color: black;">
+            <th>STT</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>SalePrice</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of products,let i = index">
+            <td>{{i+1}}</td>
+            <td>{{item.name}}</td>
+            <td><img src="http://localhost:3000/uploads/{{item.image}}" alt="" width="100"></td>
+            <td>{{item.price}}</td>
+            <td>{{item.sale_price}}</td>
+            <td>{{item.cat_name}}</td>
+            <td>{{item.status == 0 ? 'Tạm ẩn':'Hiển thị'}}</td>
+            <td>{{item.description}}</td>
+            <td>
+                <button type="button" routerLink="/admin/update-product/{{ item.id }}" class="btn btn-success">
+                    Update
+                   </button>
+                <button type="button" (click)="delete(item.id)" class="btn btn-danger ms-2">
+                    Delete
+                   </button>
+            </td>
+
+
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,58 @@
+<div class="banner position-relative">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="https://images.unsplash.com/photo-1568623970736-27bea63b4489?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" class="d-block w-100 imgBanner" alt="banner1.jpg" />
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="http://file.hstatic.net/200000189007/collection/banner_rau_an_toan_92f1135898c84937a59fdd801cd88792.jpg" class="d-block w-100 imgBanner" alt="banner2.jpg" />
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="https://images.unsplash.com/photo-1498579397066-22750a3cb424?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="d-block w-100 imgBanner" alt="banner3.jpg" />
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+</div>
+<div class="container-fluid px-5">
+    <div class="filterBar mt-5">
+        <span class="px-2 py-1 border border-dark fw-bold fs-4 rounded-3 bg-dark text-light"><i class="fa-solid fa-filter"></i> Bộ lọc</span>
+        <select #selectCate (change)="getListTourByCategory(selectCate.value)" class=" py-1 px-2 fs-4 rounded-3 ms-4">
+            <option label  >-- Danh mục --</option>
+            <option value="all" >Tất cả</option>
+            <option [value]="item.id" *ngFor="let item of allCate" >{{item.name}}</option>
+        </select>
+
+    </div>
+    <div class="all container">
+        <h2 class="text-center mt-5 mb-5" style="color: black;">Tất cả các sản phẩm</h2>
+        <hr>
+        <div class="row">
+            <div class="col-md-3" *ngFor="let item of allProduct">
+                <div  class="card mb-3" style="border: 2px solid rgba(0, 128, 0, 0.778);border-radius: 5px;cursor: pointer;" >
+                    <div class="image" routerLink="/detail/{{item.id}}">
+                     <img src="http://localhost:3000/uploads/{{item.image}}" alt="" width="100%" height="230px">
+                  </div>
+                  <div class="sale" routerLink="/detail/{{item.id}}">
+                    <span style="border: 2px solid black;padding: 5px;border-radius: 5px;font-weight: 500;background-color: rgba(1, 143, 1, 0.811);border: none;color: white;">Sale : {{(100%-(item.sale_price*100/item.price)).toFixed()}}%</span>
+                  </div>
+                  <div class="content" routerLink="/detail/{{item.id}}">
+                     <h6 class="text-center pt-3 pb-1" style="font-weight: 500;font-size: 17px;">{{item.name}}</h6>
+                     <div class="prices text-center pb-3">
+                        <span class="text-center" style="color : gray; margin-right: 5px;text-decoration-line: line-through;font-size: 13px;">{{item.price}}</span>
+                        <span class="text-center" style="color : red;font-size: 15px;font-weight: bold;">{{item.sale_price}} vnđ</span>
+                     </div>
+                  </div>
+                  <button class="btn btn-success btn-sm pt-2 pb-2" style="font-weight: bold;"><i class="fa-solid fa-cart-shopping"></i> Mua hàng</button>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>

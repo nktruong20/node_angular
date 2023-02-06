@@ -1,0 +1,41 @@
+.fontLogo {
+    font-family: 'Pacifico', cursive;
+}
+
+.bgRegister {
+    background-image: url('http://localhost:3000/images/bgRegister.jpg');
+    background-size: 100% 100%;
+}
+
+.body {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.bg{
+
+    background-image: url('https://tools.dalathasfarm.com/assets/_file/2021/2021-10/banner-rau-new.jpg');
+    height: 700px;
+    background-repeat: round;
+    width: 100%;
+    padding-top: 60px;
+    background-size: cover;
+}
+
+.bg .col-md-7{
+    margin: 0 auto;background-color: rgba(0, 0, 0, 0.497);opacity: 1;
+}
+.input {
+    border-color: green !important;
+    border-radius: 10px;
+}
+
+.forget {
+    cursor: pointer;
+    color: white;
+}
+
+.submit {
+    margin-top: 20px;
+    background: green;
+    color: #fff;
+}
